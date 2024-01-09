@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -13,10 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mailBody .= "Message:\n$message";
 
     // Send email
-    mail($to, $subject, $mailBody, $headers);
+    $success = mail($to, $subject, $mailBody, $headers);
 
-    // Redirect to a thank you page or back to the form
-    header("Location: thank_you.html");
-    exit();
+    if ($success) {
+        echo json_encode(["success" => true]);
+    } else {
+        echo json_encode(["success" => false, "message" => "Error sending email"]);
+    }
+} else {
+    echo json_encode(["success" => false, "message" => "Invalid request method"]);
 }
 ?>
