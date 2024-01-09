@@ -86,12 +86,32 @@
     </div>
 
 
-<div class="container">
-    <a class="navbar-brand" href="https://microstructures.net">
-        <img src="opmd-logo.png" alt="OPMD" class="d-inline-block align-text-top rounded-3 img-fluid">
+<style>
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo-img {
+        max-width: 700px; /* Adjust the size as needed */
+    }
+
+    .nav-link {
+        font-size: 25px; /* Adjust the font size as needed */
+    }
+</style>
+
+
+<div class="container d-flex flex-column align-items-center justify-content-center vh-1">
+    <a class="navbar-brand mb-3" href="https://microstructures.net">
+        <img src="opmd-logo.png" alt="OPMD" class="d-inline-block align-text-top rounded-3 img-fluid logo-img">
         <!-- <h3 class="mb-0">Open Phase-field Microstructure Database</h3> -->
     </a>
-    <nav class="nav nav-masthead justify-content-center float-md-2">
+    <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link fw-bold py-1 px-2 active" href="/index.html">Home</a>
         <a class="nav-link fw-bold py-1 px-2" href="/datasets.html">Datasets</a>
         <a class="nav-link fw-bold py-1 px-2" href="/research.html">Research</a>
@@ -100,6 +120,9 @@
         <a class="nav-link fw-bold py-1 px-2" href="/contact_us.html">Contact</a>
     </nav>
 </div>
+
+
+
 
 	  <!-- Rest of your content goes here -->
 
