@@ -1,0 +1,69 @@
+<!-- home.html -->
+<div class="container-fluid">
+
+    <!-- Main Content -->
+    <!-- Content for the homepage -->
+
+    <!-- XXXXX -->
+    <!-- XXXXX -->
+    <!-- XXXXX Microstructure Kinetics -->
+    <!-- XXXXX -->
+    <!-- XXXXX -->
+
+    <!-- <div class="b-example-divider"></div> -->
+
+    <hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+    <div class="text-justify">
+        <p class="lead mb-3 text-justify">
+            Experience the power of a high-throughput phase-field solver with our cutting-edge OPMD calculation tool. This website provides community access to a curated set of OPMD data, combining ease of access with advanced browsing capabilities. The OPMD data is meticulously presented in a user-friendly format, offering enhanced visibility and accessibility to the general public.
+        </p>
+        <p class="lead mb-3">
+            In addition to providing raw data, we have gone a step further by presenting the OPMD data in a graphical format. This interactive and intuitive visualization allows users to explore and interpret the data seamlessly. Our commitment to user-friendly design ensures that both experts and enthusiasts can engage with the information effortlessly, unlocking the full potential of OPMD insights. Explore the possibilities and gain valuable insights with our comprehensive OPMD data presentation.
+        </p>
+    </div>
+    <hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+
+    <h1 class="display-5 fw-bold lh-1 pb-3">Microstructure Thermodynamics</h1>
+    <div class="col-lg-10 mx-auto">
+        <p class="lead mb-3">
+            Initially, our approach involves employing Markov Chain Monte Carlo methodology to accurately estimate the parameters governing the CALPHAD-based phase diagram of thermoelectric materials, specifically focusing on \( \text{MgSnSi} \). This sophisticated technique allows us to derive precise insights into the intricate thermodynamic properties essential for a comprehensive understanding of the material's behavior.
+        </p>
+    </div>
+    <figure class="overflow-hidden" style="max-height:80vh;">
+        <div class="container px-5">
+            <img src="OPMD_step1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="axc" loading="lazy">
+            <figcaption class="text-left text-right text-center text-justify">An illustration of UP from thermodynamic parameters to the molar Gibbs energy of mixing, to the phase diagram for \( Mg_2Si_{x}Sn_{1−x} \) quasi-binary system at 700 K. left) the probability distributions for the six CALPHAD parameters, right) the calculated Gibbs energy of mixing at 700 K and uncertainty bands and the pseudo-binary phase diagram with a close-up of the peritectic reaction.</figcaption>
+        </div>
+    </figure>
+    <hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+
+    <div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="OPMD_experimental_examples2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+        <div class="col-lg-6 text-lg-start">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Kinetics</h1>
+            <p class="lead text-justify">Second, we used advanced sampling schemes to propagate uncertainties across a high-dimensional simulation input space. Synthetic microstructures are generated using CALPHAD, elastic, kinetic, and alloy composition high-throughput propagation. We generated 200,000 time series of synthetic microstructures. We then developed a database of microstructural data with accompanying time series of mechanical and physical variables. This database was used to inform the development of machine learning models to predict the material properties of interest.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6 text-lg-start">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Database</h1>
+            <p class="lead text-justify">Third, microstructure databases compile detailed information on material compositions, featuring images and associated data. This database serves as a valuable resource for researchers and enthusiasts, offering insights into the complex structures of materials.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="OPMD_database.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+    </div>
+
+</div>

@@ -17,253 +17,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-
-        .navbar-brand img {
-            width: 100%;
-            max-width: 900px;
-            max-height: 600px;
-        }
-
-        .nav-masthead .nav-link {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .text-justify {
-            text-align: justify;
-        }
-
-        .lead {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: #495057;
-        }
-
-        .display-12 {
-            font-size: 3rem;
-            font-weight: bold;
-            line-height: 1.2;
-            color: #007bff;
-        }
-
-        hr.my-4 {
-            border-color: #ffffff;
-        }
-
-        .text-uppercase {
-            text-transform: uppercase;
-        }
-
-        .overflow-hidden {
-            overflow: hidden;
-        }
-
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-        }
-
-        figcaption {
-            font-size: 14px;
-            color: #6c757d;
-        }
-
-        .btn-bd-primary {
-            /* ... (your existing styles) */
-        }
-
-        .bd-mode-toggle {
-            z-index: 2500;
-        }
-
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important;
-        }
-    </style>
+    <link href="https://bootswatch.com/5/solar/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
+       
 </head>
   
-<body class="d-flex h-100 text-center text-bg-auto">
+<body class="d-flex flex-column min-vh-100 text-center text-bg-auto">
     
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
-
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-
-	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-	  <header class="mb-auto text-center">
-		<div class="container">
-		  <a class="navbar-brand" href="https://microstructures.net">
-			<img src="OPMD-logo.png" alt="OPMD" width="1200" height="800" class="d-inline-block align-text-top">
-			<!-- <h3 class="mb-0">Open Phase-field Microstructure Database</h3> -->
-		  </a>
-		  <nav class="nav nav-masthead justify-content-center float-md-2">
-			<a class="nav-link fw-bold py-1 px-2 active" aria-current="page" href="index.html">Home</a>
-			<a class="nav-link fw-bold py-1 px-2" href="datasets.html">Datasets</a>
-			<a class="nav-link fw-bold py-1 px-2" href="Research.html">Research</a>
-			<a class="nav-link fw-bold py-1 px-2" href="comp_resources.html">Computational Resources</a>
-			<a class="nav-link fw-bold py-1 px-2" href="About.html">About</a>
-			<a class="nav-link fw-bold py-1 px-2" href="contact_us.html">Contact</a>
-		  </nav>
-		</div>
-	  </header>
-	  <!-- Rest of your content goes here -->
-
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-
-	<div class="main-content-container">
-		<main class="px-3">
-        <!-- Rest of your content goes here -->
+    <div class="container-fluid">
     
-		<!--  <h1>Under Maintance.</h1> 
-		<p class="lead"> Microstructures.Net hosts the Open-source Phase-field Microstructure Database (OPMD). </p>
-		<p class="lead">
-		  <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
-		</p> -->
-	  
-		<div class="container-fluid py-5 text-justify">
-			<h1 class="display-12 fw-bold text-center">Microstructures.Net hosts the Open-source Phase-field Microstructure Database (OPMD).</h1>
-		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+		  <symbol id="check2" viewBox="0 0 16 16">
+			<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+		  </symbol>
+		  <symbol id="circle-half" viewBox="0 0 16 16">
+			<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+		  </symbol>
+		  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+			<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+			<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+		  </symbol>
+		  <symbol id="sun-fill" viewBox="0 0 16 16">
+			<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+		  </symbol>
+		</svg>
+
+		<!-- Your existing HTML content -->
+
+		<!-- Include the navbar using JavaScript -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Fetch and insert home.html
+				fetch("home.html")
+					.then(response => response.text())
+					.then(data => {
+						document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+
+						// Fetch and insert navbar.html
+						fetch("navbar.html")
+							.then(response => response.text())
+							.then(data => {
+								document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+							});
+					});
+			});
+		</script>
+
+		<footer class="mt-auto text-white-50">
+			<p>All rights reserved for <a href="https://microstructures.net/" class="text-white">OPMD</a> creators, by <a href="https://twitter.com/vahid2364" class="text-white">@vahid2364</a>.</p>
+		</footer>
+	
 	</div>
+	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-	<!-- XXXXX Microstructure Kinetics --> 
-	<!-- XXXXX -->
-	<!-- XXXXX -->
-
-	<!-- <div class="b-example-divider"></div> -->
-
-	<div class="container-fluid">
-
-		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
-		<div class="text-justify">
-			<p class="lead mb-3 text-justify">
-				Experience the power of a high-throughput phase-field solver with our cutting-edge OPMD calculation tool. This website provides community access to a curated set of OPMD data, combining ease of access with advanced browsing capabilities. The OPMD data is meticulously presented in a user-friendly format, offering enhanced visibility and accessibility to the general public.
-			</p>
-			<p class="lead mb-3">
-				In addition to providing raw data, we have gone a step further by presenting the OPMD data in a graphical format. This interactive and intuitive visualization allows users to explore and interpret the data seamlessly. Our commitment to user-friendly design ensures that both experts and enthusiasts can engage with the information effortlessly, unlocking the full potential of OPMD insights. Explore the possibilities and gain valuable insights with our comprehensive OPMD data presentation.
-			</p>
-		</div>
-		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
-
-		<h1 class="display-5 fw-bold lh-1 pb-3">Microstructure Thermodynamics</h1>
-		<div class="col-lg-10 mx-auto">
-			<p class="lead mb-3">
-				Initially, our approach involves employing Markov Chain Monte Carlo methodology to accurately estimate the parameters governing the CALPHAD-based phase diagram of thermoelectric materials, specifically focusing on \( \text{MgSnSi} \). This sophisticated technique allows us to derive precise insights into the intricate thermodynamic properties essential for a comprehensive understanding of the material's behavior.
-			</p>
-		</div>
-		<figure class="overflow-hidden" style="max-height:80vh;">
-			<div class="container px-5">
-				<img src="OPMD_step1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="axc" width="1000" height="800" loading="lazy">
-				<figcaption class="text-left text-right text-center text-justify">An illustration of UP from thermodynamic parameters to the molar Gibbs energy of mixing, to the phase diagram for \( Mg_2Si_{x}Sn_{1−x} \) quasi-binary system at 700 K. left) the probability distributions for the six CALPHAD parameters, right) the calculated Gibbs energy of mixing at 700 K and uncertainty bands and the pseudo-binary phase diagram with a close-up of the peritectic reaction.</figcaption>
-			</div>
-		</figure>
-		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
-		
-		<div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
-			<div class="col-10 col-sm-8 col-lg-6">
-				<img src="OPMD_experimental_examples2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="600" loading="lazy">
-			</div>
-			<div class="col-lg-6 text-lg-start">
-				<h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Kinetics</h1>
-				<p class="lead text-justify">Second, we used advanced sampling schemes to propagate uncertainties across a high-dimensional simulation input space. Synthetic microstructures are generated using CALPHAD, elastic, kinetic, and alloy composition high-throughput propagation. We generated 200,000 time series of synthetic microstructures. We then developed a database of microstructural data with accompanying time series of mechanical and physical variables. This database was used to inform the development of machine learnind models to predict the material properties of interest.</p>
-				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-					<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-				</div>
-			</div>
-		</div>
-		
-		
-
-		<div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
-			<div class="col-lg-6 text-lg-start">
-				<h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Database</h1>
-				<p class="lead text-justify">Third, microstructure databases compiles detailed information on material compositions, featuring images and associated data. This database serves as a valuable resource for researchers and enthusiasts, offering insights into the complex structures of materials. 
-				</p>
-				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-					<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-				</div>
-			</div>
-			<div class="col-10 col-sm-8 col-lg-6">
-				<img src="OPMD_database.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="600" loading="lazy">
-			</div>
-		</div>
-
-
-
-	</div>
-
-
-
-
-  </main>
-  
-
-    <footer class="mt-auto text-white-50">
-        <p>All rights reserved for <a href="https://microstructures.net/" class="text-white">OPMD</a> creators, by <a href="https://twitter.com/vahid2364" class="text-white">@vahid2364</a>.</p>
-    </footer>
-</div>
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-	<main class="px-3">    
+	<main class="px-3"></main>
 
 </body>
-    
+
 </html>
