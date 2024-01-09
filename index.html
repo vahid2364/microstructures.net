@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-  <head><script src="assets/js/color-modes.js"></script>
+
+<head>
+    <!-- <script src="assets/js/color-modes.js"></script> -->
+    <!-- Other head content -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,98 +14,80 @@
     <title>Open Phase-field Microstructure Database</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
-    
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        .navbar-brand img {
+            width: 100%;
+            max-width: 900px;
+            max-height: 600px;
         }
-      }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+        .nav-masthead .nav-link {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+        .text-justify {
+            text-align: justify;
+        }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+        .lead {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #495057;
+        }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+        .display-12 {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #007bff;
+        }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+        hr.my-4 {
+            border-color: #ffffff;
+        }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        .text-uppercase {
+            text-transform: uppercase;
+        }
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
+        .overflow-hidden {
+            overflow: hidden;
+        }
 
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+        figcaption {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .btn-bd-primary {
+            /* ... (your existing styles) */
+        }
+
+        .bd-mode-toggle {
+            z-index: 2500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
     </style>
 
-    
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
-  </head>
+</head>
   
-  <body class="d-flex h-100 text-center text-bg-dark">
+<body class="d-flex h-100 text-center text-bg-auto">
+    
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -153,33 +139,131 @@
       </ul>
     </div>
 
+
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+	  <header class="mb-auto text-center">
+		<div class="container">
+		  <a class="navbar-brand" href="https://microstructures.net">
+			<img src="OPMD-logo.png" alt="Your Logo" width="1200" height="800" class="d-inline-block align-text-top">
+			<!-- <h3 class="mb-0">Open Phase-field Microstructure Database</h3> -->
+		  </a>
+		  <nav class="nav nav-masthead justify-content-center float-md-2">
+			<a class="nav-link fw-bold py-1 px-2 active" aria-current="page" href="index.html">Home</a>
+			<a class="nav-link fw-bold py-1 px-2" href="datasets.html">Datasets</a>
+			<a class="nav-link fw-bold py-1 px-2" href="Research.html">Research</a>
+			<a class="nav-link fw-bold py-1 px-2" href="comp_resources.html">Computational Resources</a>
+			<a class="nav-link fw-bold py-1 px-2" href="About.html">About</a>
+			<a class="nav-link fw-bold py-1 px-2" href="contact_us.html">Contact</a>
+		  </nav>
+		</div>
+	  </header>
+	  <!-- Rest of your content goes here -->
+
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+
+	<div class="main-content-container">
+		<main class="px-3">
+        <!-- Rest of your content goes here -->
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="index.html">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="Features">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="contact_us.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+		<!--  <h1>Under Maintance.</h1> 
+		<p class="lead"> Microstructures.Net hosts the Open-source Phase-field Microstructure Database (OPMD). </p>
+		<p class="lead">
+		  <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+		</p> -->
+	  
+		<div class="container-fluid py-5 text-justify">
+			<h1 class="display-12 fw-bold text-center">Microstructures.Net hosts the Open-source Phase-field Microstructure Database (OPMD).</h1>
+		</div>
+	</div>
 
-  <main class="px-3">
-    <h1>Under Maintance.</h1>
-    <p class="lead"> Microstructures.Net hosts the Open-source Phase-field Microstructure Database (OPMD). </p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
-    </p>
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+	<!-- XXXXX Microstructure Kinetics --> 
+	<!-- XXXXX -->
+	<!-- XXXXX -->
+
+	<!-- <div class="b-example-divider"></div> -->
+
+	<div class="container-fluid">
+
+		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+		<div class="text-justify">
+			<p class="lead mb-3 text-justify">
+				Experience the power of a high-throughput phase-field solver with our cutting-edge OPMD calculation tool. This website provides community access to a curated set of OPMD data, combining ease of access with advanced browsing capabilities. The OPMD data is meticulously presented in a user-friendly format, offering enhanced visibility and accessibility to the general public.
+			</p>
+			<p class="lead mb-3">
+				In addition to providing raw data, we have gone a step further by presenting the OPMD data in a graphical format. This interactive and intuitive visualization allows users to explore and interpret the data seamlessly. Our commitment to user-friendly design ensures that both experts and enthusiasts can engage with the information effortlessly, unlocking the full potential of OPMD insights. Explore the possibilities and gain valuable insights with our comprehensive OPMD data presentation.
+			</p>
+		</div>
+		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+
+		<h1 class="display-5 fw-bold lh-1 pb-3">Microstructure Thermodynamics</h1>
+		<div class="col-lg-10 mx-auto">
+			<p class="lead mb-3">
+				Initially, our approach involves employing Markov Chain Monte Carlo methodology to accurately estimate the parameters governing the CALPHAD-based phase diagram of thermoelectric materials, specifically focusing on \( \text{MgSnSi} \). This sophisticated technique allows us to derive precise insights into the intricate thermodynamic properties essential for a comprehensive understanding of the material's behavior.
+			</p>
+		</div>
+		<figure class="overflow-hidden" style="max-height:80vh;">
+			<div class="container px-5">
+				<img src="OPMD_step1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="axc" width="1000" height="800" loading="lazy">
+				<figcaption class="text-left text-right text-center text-justify">An illustration of UP from thermodynamic parameters to the molar Gibbs energy of mixing, to the phase diagram for \( Mg_2Si_{x}Sn_{1−x} \) quasi-binary system at 700 K. left) the probability distributions for the six CALPHAD parameters, right) the calculated Gibbs energy of mixing at 700 K and uncertainty bands and the pseudo-binary phase diagram with a close-up of the peritectic reaction.</figcaption>
+			</div>
+		</figure>
+		<hr class="my-4 bg-white"> <!-- Added white horizontal line -->
+		
+		<div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img src="OPMD_experimental_examples2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="600" loading="lazy">
+			</div>
+			<div class="col-lg-6 text-lg-start">
+				<h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Kinetics</h1>
+				<p class="lead text-justify">Second, we used advanced sampling schemes to propagate uncertainties across a high-dimensional simulation input space. Synthetic microstructures are generated using CALPHAD, elastic, kinetic, and alloy composition high-throughput propagation. We generated 200,000 time series of synthetic microstructures. We then developed a database of microstructural data with accompanying time series of mechanical and physical variables. This database was used to inform the development of machine learnind models to predict the material properties of interest.</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+					<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+				</div>
+			</div>
+		</div>
+		
+		
+
+		<div class="row mx-0 flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-lg-6 text-lg-start">
+				<h1 class="display-5 fw-bold lh-1 mb-3">Microstructure Database</h1>
+				<p class="lead text-justify">Third, microstructure databases compiles detailed information on material compositions, featuring images and associated data. This database serves as a valuable resource for researchers and enthusiasts, offering insights into the complex structures of materials. 
+				</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+					<button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+				</div>
+			</div>
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img src="OPMD_database.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="600" loading="lazy">
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
   </main>
+  
 
-  <footer class="mt-auto text-white-50">
-    <p>All rights reserved for <a href="https://microstructures.net/" class="text-white">OPMD</a>, by <a href="https://twitter.com/vahid2364" class="text-white">@vahid2364</a>.</p>
-  </footer>
+    <footer class="mt-auto text-white-50">
+        <p>All rights reserved for <a href="https://microstructures.net/" class="text-white">OPMD</a> creators, by <a href="https://twitter.com/vahid2364" class="text-white">@vahid2364</a>.</p>
+    </footer>
 </div>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+	<main class="px-3">    
+
+</body>
     
 </html>
