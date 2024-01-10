@@ -1,7 +1,7 @@
-<!doctype html>
+<!-- index.html -->
+
 <html lang="en" class="h-100" data-bs-theme="auto">
-
-
+	
   
 <body class="d-flex flex-column min-vh-100 text-center text-bg-auto">
     
@@ -26,23 +26,27 @@
 		<!-- Your existing HTML content -->
 
 		<!-- Include the navbar using JavaScript -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				// Fetch and insert home.html
-				fetch("home.html")
-					.then(response => response.text())
-					.then(data => {
-						document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+		<div id="navbarContainer"></div>
+		<div id="homeContainer"></div>
 
-						// Fetch and insert navbar.html
-						fetch("navbar.html")
-							.then(response => response.text())
-							.then(data => {
-								document.querySelector("body").insertAdjacentHTML("afterbegin", data);
-							});
-					});
-			});
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Fetch and insert navbar.html
+			fetch("navbar.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("navbarContainer").innerHTML = data;
+
+					// Fetch and insert home.html
+					fetch("home.html")
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById("homeContainer").innerHTML = data;
+						});
+				});
+		});
 		</script>
+
 
 		<!-- Footer-->
 		<footer class="py-4 mt-auto">

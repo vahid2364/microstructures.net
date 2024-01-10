@@ -2,9 +2,7 @@
 
 <head>
     <!-- <script src="assets/js/color-modes.js"></script> -->
-    <!-- Other head content -->
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -12,45 +10,41 @@
     <meta name="generator" content="Hugo 0.118.2">
     <title>Open Phase-field Microstructure Database</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    
-    <!-- quartz, sketchy, Spacelab -->
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
 
+	<!-- Include Bootstrap CSS and JavaScript -->
+	<link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!-- Include jQuery before Bootstrap JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Other head content -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <!-- quartz, sketchy, Spacelab -->
 <!-- <link href="https://bootswatch.com/5/solar/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://bootswatch.com/5/flatly/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-    <link href="https://bootswatch.com/5/quartz/bootstrap.min.css" rel="stylesheet" type="text/css"> --> 
-    
-    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+    <link href="https://bootswatch.com/5/quartz/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+<!--    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <!-- <link href="cover.css" rel="stylesheet"> -->
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> -->
+    <!-- <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    
+
+
+
        
 </head>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<script>
-    $(document).ready(function () {
-        // Get the current path
-        var path = window.location.pathname;
 
-        // Get all navbar links
-        var navLinks = $('.nav-link');
-
-        // Loop through each link and check if it matches the current path
-        navLinks.each(function () {
-            var linkPath = $(this).attr('href');
-
-            if (path === linkPath) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-        });
-    });
-</script>
 
 <nav class="navbar">
 
@@ -90,41 +84,48 @@
     </div>
 
 
-	<style>
-		.navbar-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			padding: 20px;
-		}
-
-		.logo-img {
-			max-width: 100%; /* Set maximum width to 100% of the parent container */
-			height: auto; /* Ensure the aspect ratio is maintained */
-		}
-
-		.nav-link {
-			font-size: 25px; /* Adjust the font size as needed */
-		}
-	</style>
 
 
+<script>
+    $(document).ready(function () {
+        // Get the current path
+        var path = window.location.pathname;
 
-	<div class="container d-flex flex-column align-items-center justify-content-center vh-1">
+        // Get all navbar links
+        var navLinks = $('.nav-link');
+
+        // Loop through each link and check if it matches the current path
+        navLinks.each(function () {
+            var linkPath = $(this).attr('href');
+
+            // Use a regular expression to match the path
+            var regex = new RegExp(linkPath, 'i');
+
+            if (path.match(regex)) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+</script>
+
+
+	<div class="container d-flex flex-column align-items-center justify-content-center vh-1" >
 		<a class="navbar-brand mb-3" href="https://microstructures.net">
 			<img src="opmd-logo.png" alt="OPMD" class="d-inline-block align-text-top rounded-1 img-fluid logo-img">
 			<!-- <h3 class="mb-0">Open Phase-field Microstructure Database</h3> -->
 		</a>
+
 		<nav class="nav nav-masthead justify-content-center">
-			<a class="nav-link fw-bold py-1 px-2 active" href="/index.html">Home</a>
+			<a class="nav-link fw-bold py-1 px-2" href="/index.html">Home</a>
 			<a class="nav-link fw-bold py-1 px-2" href="/datasets.html">Datasets</a>
 			<a class="nav-link fw-bold py-1 px-2" href="/research.html">Research</a>
 			<a class="nav-link fw-bold py-1 px-2" href="/comp_resources.html">Computational Resources</a>
 			<a class="nav-link fw-bold py-1 px-2" href="/about.html">About</a>
 			<a class="nav-link fw-bold py-1 px-2" href="/contact_us.html">Contact</a>
 		</nav>
+
 	</div>
 
 	  <!-- Rest of your content goes here -->
@@ -135,20 +136,42 @@
 	<!-- XXXXX -->
 	<!-- XXXXX -->
 
-    <div class="main-content-container flex-grow-1">
-		<main class="px-3">
-        <!-- Rest of your content goes here -->
-    
-		<!--  <h1>Under Maintance.</h1> 
-		<p class="lead"> Microstructures.Net hosts the Open Phase-field Microstructure Database (OPMD). </p>
-		<p class="lead">
-		  <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
-		</p> -->
-	  
-		<div class="container-fluid py-5 text-justify">
-			<h1 class="display-12 fw-bold text-center">Microstructures.Net hosts the Open Phase-field Microstructure Database (OPMD).</h1>
-		</div>
-	</div>
+  <h1 class="visually-hidden">Heroes examples</h1>
 
+  <div class="px-4 py-5 my-5 text-center" style="background-color: #f8f9fa;">
+    <h1 class="display-5 fw-bold text-body-emphasis">Microstructures.Net hosts the Open Phase-field Microstructure Database (OPMD).</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Experience the power of a high-throughput phase-field solver with our cutting-edge OPMD calculation tool. This website provides community access to a curated set of OPMD data, combining ease of access with advanced browsing capabilities. The OPMD data is meticulously presented in a user-friendly format, offering enhanced visibility and accessibility to the general public.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
+    </div>
+  </div> 
+  
+
+<script>
+    $(document).ready(function () {
+        // Get the current path
+        var path = window.location.pathname;
+
+        // Get all navbar links
+        var navLinks = $('.nav-link');
+
+        // Loop through each link and check if it matches the current path
+        navLinks.each(function () {
+            var linkPath = $(this).attr('href');
+            
+            // Use a regular expression to match the path
+            var regex = new RegExp(linkPath, 'i');
+            
+            if (path.match(regex)) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+</script>
 
 </nav>
