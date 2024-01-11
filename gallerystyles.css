@@ -20,8 +20,7 @@ body {
 
 .gallery img {
     height: 75px;
-    width: auto;
-    max-width: 100%;
+    width: 75px; /* Set both height and width to maintain a 1:1 aspect ratio */
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
