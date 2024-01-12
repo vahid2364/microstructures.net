@@ -7,26 +7,26 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 10 columns */
-    gap: 1px; /* Gap between images */
+    gap: 0px; /* Gap between images */
     margin-top: 20px;
 }
 
 .gallery img {
-    height: 120px;
-    width: 120px; /* Set both height and width to maintain a 1:1 aspect ratio */
+    height: 150px;
+    width: 150px; /* Set both height and width to maintain a 1:1 aspect ratio */
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
 .gallery img:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
