@@ -13,14 +13,14 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 20 columns */
+    grid-template-columns: repeat(8, 1fr); /* 10 columns */
     gap: 1px; /* Gap between images */
     margin-top: 20px;
 }
 
 .gallery img {
-    height: 60px;
-    width: 60px; /* Set both height and width to maintain a 1:1 aspect ratio */
+    height: 120px;
+    width: 120px; /* Set both height and width to maintain a 1:1 aspect ratio */
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
@@ -28,5 +28,5 @@ body {
 }
 
 .gallery img:hover {
-    transform: scale(4.0);
+    transform: scale(1.5);
 }

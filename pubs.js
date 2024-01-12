@@ -1,42 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Replace 'Author Name' with the desired author's name
-    const authorName = 'Vahid Attari';
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch and insert navbar.html
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbarContainer").innerHTML = data;
+                });
+        });
 
-    // Function to fetch papers from Google Scholar
-    async function fetchPapers(authorName) {
-        const response = await fetch(`https://api.scholarcy.com/v1/authors?name=${authorName}`);
-        const data = await response.json();
-        return data.papers;
-    }
-
-    // Function to display papers in the gallery
-    async function displayPapers() {
-        const papersGallery = document.getElementById('papersGallery');
-
-        try {
-            const papers = await fetchPapers(authorName);
-
-            papers.forEach((paper) => {
-                const paperCard = `
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="${paper.thumbnail}" class="card-img-top" alt="Paper Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title">${paper.title}</h5>
-                                <p class="card-text">${paper.authors.join(', ')}</p>
-                                <a href="${paper.url}" class="btn btn-primary" target="_blank">Read Paper</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-                papersGallery.innerHTML += paperCard;
-            });
-        } catch (error) {
-            console.error('Error fetching papers:', error);
+async function fetchPapers() {
+    try {
+        const response = await fetch('papers.bib');
+        if (!response.ok) {
+            throw new Error('Failed to fetch papers');
         }
-    }
+        const bibtexData = await response.text();
 
-    // Call the function to display papers
-    displayPapers();
-});
+        // Assume the BibTeX data is in the variable 'bibtexData'
+        const papers = [];
+
+        // Split BibTeX data into individual entries
+        const entries = bibtexData.split('@');
+        entries.shift(); // Remove empty first element
+
+        // Iterate over each BibTeX entry
+        entries.forEach(entry => {
+            // Extract relevant fields using a more robust parser
+            const fields = entry.match(/(?:(?!\bauthor=)\w+={.*?}),?/g);
+
+            // Create a paper object
+            const paper = {};
+            fields.forEach(field => {
+                const [key, value] = field.split('=').map(str => str.trim());
+                paper[key] = value.replace(/[\{\}]/g, ''); // Remove curly braces
+            });
+
+            // Add the paper to the array
+            papers.push(paper);
+        });
+
+        // Display papers in the HTML
+        const papersList = document.getElementById('papers-list');
+        papers.forEach(paper => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <strong>${paper.title}</strong><br>
+                Authors: ${paper.author}<br>
+                Journal: ${paper.journal}<br>
+                Year: ${paper.year}<br>
+                DOI: <a href="${paper.doi}" target="_blank">${paper.doi}</a>`;
+            papersList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Error fetching papers:', error.message);
+    }
+}
+
+// Fetch and display papers on page load
+fetchPapers();
