@@ -21,24 +21,43 @@
 	<div id="navbarContainer"></div>
 	<div id="homeContainer"></div>
 
-	<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		// Fetch and insert navbar.html
-		fetch("navbar.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("navbarContainer").innerHTML = data;
+    <!-- Include the navbar using JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch and insert home.html
+            fetch("publication-list.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+                
+                // Fetch and insert navbar.html
+                fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+                });
+            });
+        });
+    </script>
 
-			});
-	});
-	</script>
-
-    <h1>List of Academic Papers</h1>
-    <ul id="papers-list">
-        <!-- Papers will be dynamically added here using JavaScript -->
-    </ul>
-    <script src="pubs.js"></script>
-
+    <!-- Footer-->
+    <footer class="py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-lm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Copyright &copy; <a href="http://microstructures.net/index.html" class="text-decoration-none" target="_blank">microstructures.net</a> Creators, by <a href="https://twitter.com/vahid2364" class="text-white">Dr. Vahid Attari</a>  2020 - 2024</div>
+                </div>
+                <div class="col-auto">
+                    <a class="small" href="privacy.html">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="terms.html">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="/contact_us.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 
 </html>
